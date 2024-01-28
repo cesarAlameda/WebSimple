@@ -1,0 +1,284 @@
+*{
+    /* Fuente de la página */
+    font-family: sans-serif;
+}
+
+a:hover{
+    /* Color aplicado a los enlaces del nav */
+    color: #FF9500;
+}
+nav{
+    /* alineo los items en el centro */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* Doy margen a la derecha y abajo */
+    margin-right: 25%;
+    margin-bottom: 2%;
+}
+    
+nav .enlaces a{
+    /* Doy margen a la derecha en los a del nav */
+    margin-right: 5%;
+}
+
+.enlaces{
+    /* le añado un ancho al div enlaces */
+    width: 60%;
+}
+
+header{
+    /* Doy el borde de abajo al header */
+    border-bottom: 3px solid #004080;
+
+}
+header img{
+    /* Añado el ancho a la imágen del header */
+    width: 20%;
+}
+
+nav a{
+    /* le doy color a la letra de los enlaces del nav, le quito la decoracion */
+    color:#004080 ;
+    text-decoration: none;
+    /* Le doy un margen del 3% abajo */
+    margin-bottom: 3%;
+    /* Aplio el peso de la fuente (la hago mas gruesa) */
+    font-weight:600 ;
+
+}
+/* fin cabecera */
+
+/* Inicio del section */
+h2{
+    /* Doy color a los h2   */
+   color: rgb(184, 184, 184);
+}
+
+section img:hover{
+    /* Al pasar el cursor por las imagenes se genera una sombra */
+    filter:drop-shadow(10px 10px 4px rgb(168, 168, 168));
+}
+.container{
+    /* Contenedor al que doy una direccion en linea y coloreo el borde inferior */
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid #FF9500 ;
+}
+aside img{
+    /* Doy ancho a la imagen */
+    width: 90%;
+}
+aside{
+    /* Le doy un márgen a la izquierda y abajo del 2 y 5 % respectivamente  */
+    margin-bottom: 2%;
+    margin-left: 5%;
+    width: 35%;
+}
+
+input{
+    /* le doy un margen al input del 9% arriba quito el borde pero luego pongo el borde de abajo y lo coloreo del azul */
+    margin-top: 9%;
+    border:0;
+    border-bottom: 5px solid #004080 ;
+}
+button{
+    /* añado color al fondo, le doy color azure a la letra, padding 2% y un ancho del 25% */
+    background-color: #004080;
+    color: azure;
+    padding: 2%;
+    width: 25%;
+
+}
+input:focus{
+    /* Al clicar en el input el borde de abajo se colorea */
+    border-bottom: 3px solid #FF9500  ;
+}
+button:hover{
+    /* al pasar el cursor por encima del boton el color del texto se pone naranja */
+    color: #FF9500;
+}
+/* FIN DEL SECTION */
+
+/* Inicio del footer */
+footer{
+    /* pongo flex, alineo los items al centro y doy espacio entre ellos */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer img:hover{
+    /* al pasar el cursor por encima se pone una sobra */
+    filter:drop-shadow(10px 10px 4px rgb(168, 168, 168));
+}
+
+/* Fin del footer */
+
+
+/*  Media query*/
+@media screen and (max-width: 1000px) {
+    aside{
+        /*quito el aside  */
+        display: none;
+    }
+    .enlaces{
+        /* le doy flex lo pongo en columnas */
+        display: flex;
+        flex-direction: column;
+
+    }
+  }
+
+
+.main{
+        /* A la clase main le doy un width de 100% respecto al padre, le pongo una altura en em para que se sume */
+        width: 70%;
+        height: 34em;
+        margin-top: 2%;
+        margin-bottom: 3%;
+        /* le pongo un gap de 3 px */
+        gap: 3px;
+
+        /* Le doy un margen arriba del 1%, alineo y doy color al texto además del background */
+     
+        /* Grid de 5 filas y 4 columnas */
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(5,1fr); 
+  }
+
+  .p1{
+    /* GRID */
+    grid-column: 1/3;
+    grid-row: 1/4;
+    /* FIN GRID */
+
+    /* Background */
+    background-color: #FF9500;
+    /* Fin background */
+
+    /* Inicio Flex */
+    display: flex;
+    align-items: center;
+    /* Fin flex */
+
+    /* Pongo la letra en negrita y blanca */
+    font-weight: bold;
+    color: white;
+  }
+
+  /* al p de p1 le doy un margen a la izquierda del 4%, le doy un ancho dle 100% y subo el tamaño de la letra */
+  .p1 p{
+    margin-left: 4%;
+    width: 100%;
+    font-size: 1.3em;
+  }
+
+  /* A los a de los divs del main les quito la decoración y les coloreo blancos */
+  .main div a{
+    text-decoration: none;
+    color: white;
+  }
+
+  /* al a de p1 del main le cambio el color cuando le das click */
+  .main .p1 a:hover{
+    color: #004080;
+  }
+
+
+  
+
+  .p2{
+    /* GRID */
+    grid-column: 3/4;
+    grid-row: 1/3;
+    /* FIN GRID */
+
+    /* Inicio background */
+    background-color: black;
+    /* fin background */
+
+
+  }
+  
+  .p3{
+    /* GRID */
+    grid-column: 4/5;
+    grid-row: 1/3;
+    /* FIN GRID */
+
+    /* Inicio background */
+    background-color:#FF9500;
+    /* fin background */
+
+  }
+
+  .p4{
+    /* GRID */
+    grid-column: 3/5;
+    grid-row: 3/4 ;
+    /* FIN GRID */
+
+    /* inicio background */
+    background-color:#004080;
+    /* fin background */
+
+   
+
+
+  }
+
+  /* quito el margen a las p (p2-p6) */
+  .p6 p,.p5 p,.p4 p, .p3 p, .p2 p{
+    margin: 0;
+
+  }
+ 
+
+
+  /* El flex es comun desde p2 hasta p6 */
+  .p2, .p3, .p4, .p5, .p6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .p5{
+    /* GRID */
+    grid-column: 1/5;
+    grid-row: 4/5;
+    /* FIN GRID */
+
+    /* inicio background */
+    background-image: url(../img/main/ceramica-murales.jpg);
+    /* Fin background */
+
+    /* Pongo la letra en negrita y le doy tamaño */
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  /* Al darle click al enlace de p5 cambiará de color */
+  .main .p5 a:hover{
+    color:#FF9500;
+  }
+
+
+  .p6{
+    /* GRID */
+    grid-column: 1/5 ;
+    grid-row: 5/6 ;
+    /* FIN GRID */
+    background-color: black;
+
+
+  }
+
+  /* Les doy color */
+  .p2,.p3,.p4,.p5,.p6{
+    color: white;
+  }
+
+  /* fin */
